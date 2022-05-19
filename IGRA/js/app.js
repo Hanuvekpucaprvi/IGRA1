@@ -11,9 +11,9 @@ App.prototype.start = function () {
     'use strict';
     //SCENIII 
     let scenes = [];
-    scenes.push('Boot');
-    scenes.push('Preload');
-    scenes.push('Menu');
+    scenes.push(Boot);
+    scenes.push(Preload);
+    scenes.push(Menu);
 
 
     //KONFIGURACII
@@ -28,6 +28,8 @@ App.prototype.start = function () {
         scene: scenes,
 
 
+
+
     };
 
     //GAME APP
@@ -38,13 +40,7 @@ App.prototype.start = function () {
     game.IS_DEV = this.IS_DEV;
     game.VERSION = this.VERSION;
 
-    game.CONFIG = {
-        width: config.width,
-        height: config.height,
-        centerX: Math.round(0.5 * config.width),
-        centerY: Math.round(0.5 * config.height)
-    };
-
+    game.CONFIG = this.config;
 
 
 

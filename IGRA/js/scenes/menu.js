@@ -10,7 +10,8 @@ class Menu extends Phaser.Scene {
     preload() {
     }
     create() {
-        console.log(`hi`);
+        console.log('hi')
+
     }
 
 }
